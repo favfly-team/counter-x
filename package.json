@@ -1,0 +1,32 @@
+{
+  "name": "counter-api",
+  "version": "1.0.0",
+  "description": "A description of your package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Darpan Chakraborty",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repo.git"
+  },
+  "keywords": [
+    "node",
+    "package",
+    "npm",
+    "counter",
+    "countapi",
+    "website",
+    "views",
+    "counter"
+  ],
+  "bugs": {
+    "url": "https://github.com/your-username/your-repo/issues"
+  },
+  "homepage": "https://github.com/your-username/your-repo#readme",
+  "dependencies": {
+    "@kernex/client": "^1.0.1"
+  }
+}
