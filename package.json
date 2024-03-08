@@ -1,6 +1,6 @@
 {
   "name": "counter-x",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "A description of your package",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,6 @@
   "homepage": "https://github.com/favfly-team/counter-x#readme",
   "dependencies": {
     "@kernex/client": "^1.0.1"
-  }
+  },
+  "private": false
 }
