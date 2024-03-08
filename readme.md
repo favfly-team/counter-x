@@ -1,1 +1,1 @@
-## Docs is coming soon
+## Docs coming soon
