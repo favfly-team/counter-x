@@ -1,9 +1,9 @@
 import client from "./lib/kernex-client";
 
-const counterapi = {};
+const counterx = {};
 
 // Function to send a hit request to the counter API
-counterapi.hit = async (namespace, key) => {
+counterx.hit = async (namespace, key) => {
   try {
     // Make an API request to the hit route
 
@@ -44,4 +44,4 @@ counterapi.hit = async (namespace, key) => {
   }
 };
 
-module.exports = counterapi;
+export default counterx;

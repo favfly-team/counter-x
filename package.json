@@ -1,6 +1,6 @@
 {
-  "name": "counter-api",
-  "version": "1.0.0",
+  "name": "counter-x",
+  "version": "1.0.3",
   "description": "A description of your package",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/favfly-team/counter-api.git"
+    "url": "git+https://github.com/favfly-team/counter-x.git"
   },
   "keywords": [
     "node",
@@ -23,9 +23,9 @@
     "counter"
   ],
   "bugs": {
-    "url": "https://github.com/favfly-team/counter-api/issues"
+    "url": "https://github.com/favfly-team/counter-x/issues"
   },
-  "homepage": "https://github.com/favfly-team/counter-api#readme",
+  "homepage": "https://github.com/favfly-team/counter-x#readme",
   "dependencies": {
     "@kernex/client": "^1.0.1"
   }
