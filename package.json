@@ -1,9 +1,9 @@
 {
   "name": "counter-x",
-  "version": "1.0.10",
-  "type": "module",
+  "version": "1.0.26",
   "description": "A description of your package",
   "main": "index.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,15 +20,16 @@
     "counter",
     "countapi",
     "website",
-    "views",
-    "counter"
+    "views"
   ],
   "bugs": {
     "url": "https://github.com/favfly-team/counter-x/issues"
   },
   "homepage": "https://github.com/favfly-team/counter-x#readme",
-  "dependencies": {
+  "peerDependencies": {
     "@kernex/client": "^1.0.1"
   },
-  "private": false
+  "dependencies": {
+    "@kernex/client": "^1.0.1"
+  }
 }
