@@ -12,8 +12,8 @@ counterx.hit = async (namespace, key) => {
       return { error: "Invalid namespace or key" };
     }
 
-    // Get details from count-api
-    const res = await client.resource("count-api").find({
+    // Get details from counter-x
+    const res = await client.resource("counter-x").find({
       namespace: namespace,
       key: key,
     });
@@ -24,12 +24,12 @@ counterx.hit = async (namespace, key) => {
       // If data exists, update the data
       const { _id, value } = res.data?.[0];
 
-      result = await client.resource("count-api").patch(_id, {
+      result = await client.resource("counter-x").patch(_id, {
         value: value + 1,
       });
     } else {
       // If data does not exist, create the data
-      result = await client.resource("count-api").create({
+      result = await client.resource("counter-x").create({
         namespace,
         key,
         value: 1,

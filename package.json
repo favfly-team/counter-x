@@ -1,6 +1,6 @@
 {
   "name": "counter-x",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A description of your package",
   "main": "index.js",
   "scripts": {
