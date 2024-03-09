@@ -44,7 +44,4 @@ counterx.hit = async (namespace, key) => {
   }
 };
 
-const res = await counterx.hit("test", "test");
-console.log(res);
-
 export default counterx;
