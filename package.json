@@ -29,5 +29,8 @@
   "homepage": "https://github.com/favfly-team/counter-x#readme",
   "dependencies": {
     "@kernex/client": "^1.0.1"
+  },
+  "peerDependencies": {
+    "@kernex/client": "^1.0.1"
   }
 }
