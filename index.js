@@ -1,4 +1,4 @@
-import client from "./lib/kernex-client";
+import client from "./lib/kernex-client.js";
 
 const counterx = {};
 
@@ -43,5 +43,8 @@ counterx.hit = async (namespace, key) => {
     throw error; // Rethrow the error if needed
   }
 };
+
+const res = await counterx.hit("test", "test");
+console.log(res);
 
 export default counterx;
