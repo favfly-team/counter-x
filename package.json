@@ -1,7 +1,7 @@
 {
   "name": "counter-x",
   "version": "1.0.30",
-  "description": "A description of your package",
+  "description": "A simple package to count the views of your website using counter-x-api",
   "main": "index.js",
   "private": false,
   "type": "module",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "FavFly Team",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/favfly-team/counter-x.git"
@@ -21,16 +21,12 @@
     "counter",
     "countapi",
     "website",
-    "views"
+    "views",
+    "counter-x",
+    "counter-x-api"
   ],
   "bugs": {
     "url": "https://github.com/favfly-team/counter-x/issues"
   },
-  "homepage": "https://github.com/favfly-team/counter-x#readme",
-  "dependencies": {
-    "@kernex/client": "^1.0.1"
-  },
-  "peerDependencies": {
-    "@kernex/client": "^1.0.1"
-  }
+  "homepage": "https://github.com/favfly-team/counter-x#readme"
 }

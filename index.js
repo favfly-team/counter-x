@@ -1,46 +1,40 @@
-import client from "./lib/kernex-client.js";
-
+// declare counterx as an empty object
 const counterx = {};
 
-// Function to send a hit request to the counter API
+// Function to send a hit request to the counter-x API
 counterx.hit = async (namespace, key) => {
   try {
-    // Make an API request to the hit route
-
     if (!namespace || !key) {
       // Invalid namespace or key
       return { error: "Invalid namespace or key" };
     }
 
-    // Get details from counter-x
-    const res = await client.resource("counter-x").find({
-      namespace: namespace,
-      key: key,
-    });
+    // Make an API request to the hit route
+    const response = await fetch(
+      `https://counter-x-api.vercel.app/api/hit/${namespace}/${key}`
+    );
 
-    let result = {};
+    return response;
+  } catch (error) {
+    return { error: "An error occurred", error };
+  }
+};
 
-    if (res?.total > 0) {
-      // If data exists, update the data
-      const { _id, value } = res.data?.[0];
-
-      result = await client.resource("counter-x").patch(_id, {
-        value: value + 1,
-      });
-    } else {
-      // If data does not exist, create the data
-      result = await client.resource("counter-x").create({
-        namespace,
-        key,
-        value: 1,
-      });
+counterx.get = async (namespace, key) => {
+  try {
+    if (!namespace || !key) {
+      // Invalid namespace or key
+      return { error: "Invalid namespace or key" };
     }
 
-    return result;
+    // Make an API request to the hit route
+    const response = await fetch(
+      `https://counter-x-api.vercel.app/api/get/${namespace}/${key}`
+    );
+
+    return response;
   } catch (error) {
-    // Handle the error here
-    console.error("An error occurred:", error);
-    throw error; // Rethrow the error if needed
+    return { error: "An error occurred", error };
   }
 };
 
