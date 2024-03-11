@@ -14,7 +14,9 @@ counterx.hit = async (namespace, key) => {
       `https://counter-x-api.vercel.app/api/hit/${namespace}/${key}`
     );
 
-    return response;
+    const res = await response.json();
+
+    return res?.result;
   } catch (error) {
     return { error: "An error occurred", error };
   }
@@ -32,7 +34,9 @@ counterx.get = async (namespace, key) => {
       `https://counter-x-api.vercel.app/api/get/${namespace}/${key}`
     );
 
-    return response;
+    const res = await response.json();
+
+    return res?.result;
   } catch (error) {
     return { error: "An error occurred", error };
   }
