@@ -30,7 +30,7 @@ Keys and namespaces must match **^\[A-Za-z0-9\_-.\]{3,64}$**.
 
 ## Available methods
 
-&gt; ℹ️ **Note**: When requesting existing keys, if the key doesn't exists the status returned will be 404 (the promise will not fail).
+> ℹ️ \*\*Note\*\*: When requesting existing keys, if the key doesn't exists the status returned will be 404 (the promise will not fail).
 
 ### get
 
@@ -42,7 +42,13 @@ Get the value of a key.
 counterx.get('mysite.com', 'test').then((result) ={ ... });
 ```
 
-_result_ may look like
+**Rest API**
+
+```plaintext
+https://counter-x-api.vercel.app/api/get/{namespace}/{key}
+```
+
+result may look like
 
 ```plaintext
 {
@@ -64,10 +70,16 @@ _result_ may look like
 A shorthand for update with amount=1. And useful if you don't want to create a key manually, since if you request a key that doesn't exists, a key with \_enable_reset\_=false, \_update_lowerbound\_=0 and \_update_upperbound\_=1 will be created automatically.
 
 ```plaintext
-countapi.hit('mysite.com', 'visits').then((result) ={ ... });
+countapi.hit('mysite.com', 'test').then((result) ={ ... });
 ```
 
-_result_ may look like
+**Rest API**
+
+```plaintext
+https://counter-x-api.vercel.app/api/hit/{namespace}/{key}
+```
+
+result may look like
 
 ```plaintext
 {
