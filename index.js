@@ -2,7 +2,7 @@
 const counterx = {};
 
 // Function to send a hit request to the counter-x API
-counterx.hit = async (namespace, key) => {
+counterx.hit = async (namespace, key, initialValue) => {
   try {
     if (!namespace || !key) {
       // Invalid namespace or key
@@ -11,7 +11,7 @@ counterx.hit = async (namespace, key) => {
 
     // Make an API request to the hit route
     const response = await fetch(
-      `https://counter-x-api.vercel.app/api/hit/${namespace}/${key}`
+      `https://counter-x-api.vercel.app/api/hit/${namespace}/${key}/${initialValue}`
     );
 
     const res = await response.json();
